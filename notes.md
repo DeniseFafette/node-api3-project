@@ -3,17 +3,26 @@ npm install to download dependencies
 add dependencies: npm express
 
 ## Setup Server 
--  import express
-const express = require('express');
-const server = express();
+server.js
+import express
+- const express = require('express');
+- const server = express();
 
--  create routes and import router
-const router = require('path');
+index.js
+- const server = require('./server.js');
+- server.listen(3000, () => console.log('Server is on port 3000'));
 
-- server middleware
-server.use(express.json());
-server.use('/api/posts', postsRouter);
-server.listen(3000, () => console.log('Server is on 3000'));
+start server
+- npm run server
 
-- start server
-npm run server
+test server on Postman
+
+
+create routes and import router
+- const router = require('path');
+
+server middleware
+- server.use(express.json());
+- server.use('/api/posts', postsRouter);
+
+
